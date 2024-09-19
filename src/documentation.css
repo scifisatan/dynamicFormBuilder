@@ -1,0 +1,59 @@
+/* Container styling for documentation */
+.documentation-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  color: #333;
+  margin-top: 20px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Paragraph and list styling */
+p {
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Preformatted text for example JSON */
+pre {
+  background-color: #e8e8e8;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+/* Code styling */
+code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 14px;
+}
