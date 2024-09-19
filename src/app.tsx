@@ -57,6 +57,10 @@ const App: React.FC = () => {
       return "Schema must be an array";
     }
 
+     if (schema.length === 0) {
+      return "Schema is empty";
+    }
+
     for (const field of schema) {
       if (!field.type || !field.name || !field.label) {
         return "Each schema field must have a type, name, and label";
