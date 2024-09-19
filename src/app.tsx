@@ -34,8 +34,8 @@ const schemaData: FieldSchema[] = [
 
 
 const App: React.FC = () => {
-  const [schema, setSchema] = useState<FieldSchema[]>(schemaData);
-  const [schemaInput, setSchemaInput] = useState<string>(""); // State for schema input
+  const [schema, setSchema] = useState<FieldSchema[]>([]);
+  const [schemaInput, setSchemaInput] = useState<string>(JSON.stringify(schemaData)); // State for schema input
   const [schemaError, setSchemaError] = useState<string | null>(null);
   const [submittedData, setSubmittedData] = useState<Record<
     string,
