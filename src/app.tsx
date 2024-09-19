@@ -111,6 +111,8 @@ const App: React.FC = () => {
               placeholder="Paste your JSON schema here..."
               className="schema-textarea"
             />
+            {schemaError && <div className="error-message">{schemaError}</div>}
+
             <button onClick={handleGenerateForm} className="submit-button">
               Generate Form
             </button>
@@ -118,8 +120,7 @@ const App: React.FC = () => {
           <Documentation />
         </>
       )}
-      {schemaError && <div className="error-message">{schemaError}</div>}
-
+      
       {showForm && !schemaError && (
         <>
           <Form schema={schema} onSubmit={handleSubmit} />
