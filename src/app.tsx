@@ -1,9 +1,37 @@
 import React, { useState } from "react";
 import "./app.css";
 import { Form } from "./form"; 
-import schemaData from "./schema.json";
 import { FieldSchema } from "./types";
 import Documentation from "./documentation";
+
+const schemaData: FieldSchema[] = [
+  {
+    "type": "text",
+    "name": "fullName",
+    "label": "Full Name",
+    "required": true
+  },
+  { "type": "email", "name": "email", "label": "Email", "required": true },
+  {
+    "type": "date",
+    "name": "dateOfBirth",
+    "label": "Date of Birth",
+    "required": true
+  },
+  { "type": "tel", "name": "phone", "label": "Phone Number" },
+  { "type": "text", "name": "occupation", "label": "Occupation" },
+  {
+    "type": "file",
+    "name": "profilePicture",
+    "label": "Profile Picture",
+    "required": true,
+    "accept": "image/*",
+    "maxSize": 2097152
+  },
+  { "type": "number", "name": "age", "label": "Age", "required": true }
+]
+
+
 
 const App: React.FC = () => {
   const [schema, setSchema] = useState<FieldSchema[]>(schemaData);
